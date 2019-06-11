@@ -3,6 +3,7 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
+rm -fr dist/iotajapan/*
 npm run build
 
 # Go To Public folder
@@ -24,6 +25,6 @@ git push origin HEAD:master
 cd ../..
 
 git submodule update
-git a
-git cm 'update'
-git push
+git add .
+git commit -m 'update'
+git push origin master
