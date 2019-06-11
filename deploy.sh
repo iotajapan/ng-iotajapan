@@ -22,3 +22,8 @@ git push origin HEAD:master
 
 # Come Back up to the Project Root
 cd ../..
+
+git submodule update
+git a
+git cm 'update'
+git push
