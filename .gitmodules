@@ -1,0 +1,4 @@
+[submodule "dist/iotajapan"]
+	path = dist/iotajapan
+	url = git@github.com:iotajapan/iotajapan.github.io.git
+	branch = master
