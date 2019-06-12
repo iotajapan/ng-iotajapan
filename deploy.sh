@@ -1,7 +1,19 @@
 #!/bin/bash
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-cp dist/deploy/* dist/iotajapan/
-cp dist/deploy/.* dist/iotajapan/
+
+npm run build
+cp dist/* dist/iotajapan/
+cp dist/.git dist/iotajapan/
+cp dist/.gitignore dist/iotajapan/
+cd dist/iotajapan
+git add .
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
+git push origin HEAD:master
+cd ../../
 
 # Build the project.
 # rm -fr dist/iotajapan/*
