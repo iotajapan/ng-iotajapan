@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href='https://iotajapan.com/'",
-    "build2": "ng build --prod --base-href='https://iotajapan.com/' && ls -d deploy_dir/* | xargs rm -rf && cp -rf dist/* deploy_dir/",
     "deploy": "angular-cli-ghpages --dir='dist/iotajapan'",
     "test": "ng test",
     "lint": "ng lint",
