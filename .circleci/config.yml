@@ -51,7 +51,20 @@ jobs:
       - run: npm i
       - run: git config user.name $GITHUB_NAME
       - run: git config user.email $GITHUB_EMAIL
-      - run: bash deploy.sh
+      - run: npm run build
+      - run:
+          command: |
+            cp dist/* dist/iotajapan/
+            cp dist/.git dist/iotajapan/
+            cp dist/.gitignore dist/iotajapan/
+            cd dist/iotajapan
+            git add .
+            msg="rebuilding site `date`"
+            if [ $# -eq 1 ]
+              then msg="$1"
+            fi
+            git commit -m "$msg"
+            git push origin HEAD:master
 
 workflows:
   version: 2
