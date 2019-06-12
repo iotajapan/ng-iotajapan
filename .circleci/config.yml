@@ -65,6 +65,8 @@ jobs:
             echo 'gitdir: ../../.git/modules/dist/iotajapan' > dist/iotajapan/.git
             cp dist/.gitignore dist/iotajapan/
             cd dist/iotajapan
+            git config user.name $GITHUB_NAME
+            git config user.email $GITHUB_EMAIL
             git add .
             msg="rebuilding site `date`"
             if [ $# -eq 1 ]
@@ -77,11 +79,12 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - master
+      - deploy
+      # - build
+      # - deploy:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
