@@ -1,6 +1,6 @@
 # ng-iotajapan
-- iotajapan.com の元ファイル.
-- dist の中身が iotajapan.com の実行ファイルです.
+- `iotajapan.com`の元ファイル.
+- `dist/iotajapan`の中身が`iotajapan.com`の実行ファイル.
 
 # Usage
 ## ローカルで動かす
