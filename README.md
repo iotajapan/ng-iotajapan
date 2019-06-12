@@ -1,4 +1,4 @@
-# ng-iotajapan
+# ng-iotajapan [![CircleCI](https://circleci.com/gh/iotajapan/ng-iotajapan/tree/master.svg?style=svg)](https://circleci.com/gh/iotajapan/ng-iotajapan/tree/master)
 - `iotajapan.com`の元ファイル.
 - `dist/iotajapan`の中身が`iotajapan.com`の実行ファイル.
 
