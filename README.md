@@ -8,8 +8,18 @@
 git clone git@github.com:iotajapan/ng-iotajapan.git
 cd ng-iotajapan
 # サイト起動
-docker-compose up -d
+docker-compose up -d --build
 # ブラウザで`localhost:4200`にアクセスする.
 # サイト停止
 docker-compose down
+```
+
+## Angularのバージョンアップ
+```bash
+# コンテナの中に入る
+docker-compose exec angular sh
+# バージョンアップを行う
+ng update @angular/cli @angular/core
+# コンテナから出る
+exit
 ```
