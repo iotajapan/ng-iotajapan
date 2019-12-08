@@ -7,6 +7,7 @@
 ```bash
 git clone git@github.com:iotajapan/ng-iotajapan.git
 cd ng-iotajapan
+sudo npm i
 # サイト起動
 docker-compose up -d --build
 # ブラウザで`localhost:4200`にアクセスする.
