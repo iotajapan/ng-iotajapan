@@ -15,12 +15,22 @@ docker-compose up -d --build
 docker-compose down
 ```
 
-## Angularのバージョンアップ
+## Angular のバージョンアップ
 ```bash
 # コンテナの中に入る
 docker-compose exec angular sh
 # バージョンアップを行う
 ng update @angular/cli @angular/core
+# コンテナから出る
+exit
+```
+
+## Angular Material のバージョンアップ
+```bash
+# コンテナの中に入る
+docker-compose exec angular sh
+# バージョンアップを行う
+ng update @angular/material
 # コンテナから出る
 exit
 ```
