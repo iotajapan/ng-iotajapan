@@ -5,9 +5,14 @@
 # Usage
 ## ローカルで動かす
 ```bash
-git clone git@github.com:iotajapan/ng-iotajapan.git
+# submodule も一緒に clone する
+git clone --recurse-submodules git@github.com:iotajapan/ng-iotajapan.git
 cd ng-iotajapan
 sudo npm i
+# CircleCI で自動でデプロイされたブランチを master に戻す
+cd dist/iotajapan
+git checkout master
+cd ../..
 # サイト起動
 docker-compose up -d --build
 # ブラウザで`localhost:4200`にアクセスする.
